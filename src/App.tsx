@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {ButtonComponent} from "./Button";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let maxValue = 5
+    let minValue = 0
+    const [value, setValue] = useState(0)
+    const add = (value: number) => {
+        if (value === maxValue) {
+            return
+        } else {
+            setValue(value + 1)
+        }
+    }
+    const del = (value: number) => {
+        if (value === minValue) {
+            return
+        } else {
+            setValue(value - 1)
+        }
+    }
+
+    return (
+        <div className="App">
+            <div className="container">
+                <div className={`${"input"} ${value === maxValue ? "redInput" : ""}`}>
+                    {value}
+                </div>
+                <div className="containerButton">
+                    <ButtonComponent onClick={() => {
+                        add(value)
+                    }} text={"Add"} value={value} maxValue={maxValue} minValue={minValue}/>
+                    <ButtonComponent onClick={() => {
+                        del(value)
+                    }} text={"Del"} value={value} maxValue={maxValue} minValue={minValue}/>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;

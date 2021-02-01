@@ -1,0 +1,13 @@
+.button {
+    width: 150px;
+    text-align:center;
+    border: 1px solid gold;
+    border-radius: 3px;
+    font-size: xx-large;
+    padding: 3px;
+    height: 25px;
+}
+
+.buttonOpacity {
+    opacity: 0.3;
+}
