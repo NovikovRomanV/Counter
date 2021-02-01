@@ -17,7 +17,7 @@ function App() {
         if (value === minValue) {
             return
         } else {
-            setValue(value - 1)
+            setValue(0)
         }
     }
 

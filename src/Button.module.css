@@ -1,11 +1,12 @@
 .button {
-    width: 150px;
+    width: 100%;
     text-align:center;
-    border: 1px solid gold;
+    border: 1px solid aqua;
     border-radius: 3px;
     font-size: xx-large;
     padding: 3px;
     height: 25px;
+    background-color: aqua;
 }
 
 .buttonOpacity {

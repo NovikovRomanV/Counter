@@ -1,7 +1,7 @@
 .App {
   display: flex;
   align-items: center;
-  background-color: blue;
+  background-color: darkslategray;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,8 +11,8 @@
 
 .container {
   margin: auto;
-  border: 2px solid gold;
-  border-radius: 2px;
+  border: 2px solid aqua;
+  border-radius: 5px;
   width: 250px;
   height: 250px;
 }
@@ -23,15 +23,17 @@
 
 .input {
   margin: 25px;
-  border: 1px solid gold;
+  border: 1px solid aqua;
   text-align: center;
   border-radius: 2px;
   padding: 25px;
   font-size: xx-large;
+  background-color: aqua;
 }
 
 .containerButton {
   display: flex;
   justify-content: space-around;
   margin-bottom: 5px;
+  
 }
